@@ -1,0 +1,64 @@
+*,
+*:after,
+*:before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.main {
+  width: 50%;
+  height: 50%;
+  outline: black 2px solid;
+}
+
+.nav {
+  display: flex;
+  position: absolute;
+  top: 0;
+  height: 3rem;
+  background: #ddd;
+  width: 100%;
+  h1 {
+  }
+}
+
+.nav-list {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #dddddd;
+  list-style: none;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem 7rem;
+  transform: translateX(100%);
+  transition: transform 0.3s;
+  outline: black 2px solid;
+  .nav-item {
+    .nav-link {
+      text-decoration: none;
+      font-size: 3rem;
+    }
+  }
+}
+.nav-toggle {
+  position: absolute;
+}
+.nav-open {
+  .nav-list {
+    transform: translateX(0);
+  }
+}
